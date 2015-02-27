@@ -1,0 +1,39 @@
+<Project name="MindFire" description="" newfilesearch="None" enableviewstate="True" version="1.1" projecttype="C#">
+  <Contents>
+    <File name="./gui.glade" subtype="Code" buildaction="EmbedAsResource" dependson="" data="" />
+    <File name="./Main.cs" subtype="Code" buildaction="Compile" dependson="" data="" />
+    <File name="./AssemblyInfo.cs" subtype="Code" buildaction="Compile" dependson="" data="" />
+    <File name="./pixmaps/aboutDialogImage.png" subtype="Code" buildaction="EmbedAsResource" dependson="" data="" />
+    <File name="./pixmaps/mindFireMonkey.png" subtype="Code" buildaction="EmbedAsResource" dependson="" data="" />
+    <File name="../icons/packs/gnant/24x24/stock/media-play.png" subtype="Code" buildaction="EmbedAsResource" dependson="" data="" />
+    <File name="../icons/packs/gnant/24x24/stock/media-stop.png" subtype="Code" buildaction="EmbedAsResource" dependson="" data="" />
+    <File name="./pixmaps/media-next.png" subtype="Code" buildaction="EmbedAsResource" dependson="" data="" />
+    <File name="./pixmaps/media-prev.png" subtype="Code" buildaction="EmbedAsResource" dependson="" data="" />
+  </Contents>
+  <References>
+    <Reference type="Gac" refto="gtk-sharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" localcopy="True" />
+    <Reference type="Gac" refto="gdk-sharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" localcopy="True" />
+    <Reference type="Gac" refto="glib-sharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" localcopy="True" />
+    <Reference type="Gac" refto="glade-sharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" localcopy="True" />
+    <Reference type="Gac" refto="pango-sharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" localcopy="True" />
+    <Reference type="Gac" refto="glade-sharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" localcopy="True" />
+  </References>
+  <DeploymentInformation target="" script="" strategy="File" />
+  <Configuration runwithwarnings="False" name="Debug">
+    <CodeGeneration runtime="MsNet" compiler="Csc" warninglevel="4" nowarn="" includedebuginformation="True" optimize="True" unsafecodeallowed="False" generateoverflowchecks="True" mainclass="" target="Exe" definesymbols="" generatexmldocumentation="False" win32Icon="" />
+    <Execution commandlineparameters="" consolepause="True" />
+    <Output directory="./bin/Debug" assembly="MindFire" executeScript="" executeBeforeBuild="" executeAfterBuild="" />
+  </Configuration>
+  <Configurations active="Debug">
+    <Configuration runwithwarnings="False" name="Debug">
+      <CodeGeneration runtime="MsNet" compiler="Csc" warninglevel="4" nowarn="" includedebuginformation="True" optimize="True" unsafecodeallowed="False" generateoverflowchecks="True" mainclass="" target="Exe" definesymbols="" generatexmldocumentation="False" win32Icon="" />
+      <Execution commandlineparameters="" consolepause="True" />
+      <Output directory="./bin/Debug" assembly="MindFire" executeScript="" executeBeforeBuild="" executeAfterBuild="" />
+    </Configuration>
+    <Configuration runwithwarnings="False" name="Release">
+      <CodeGeneration runtime="MsNet" compiler="Csc" warninglevel="4" nowarn="" includedebuginformation="True" optimize="True" unsafecodeallowed="False" generateoverflowchecks="True" mainclass="" target="Exe" definesymbols="" generatexmldocumentation="False" win32Icon="" />
+      <Execution commandlineparameters="" consolepause="True" />
+      <Output directory="./bin/Release" assembly="MindFire" executeScript="" executeBeforeBuild="" executeAfterBuild="" />
+    </Configuration>
+  </Configurations>
+</Project>

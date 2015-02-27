@@ -1,0 +1,16 @@
+<Combine fileversion="1.0" name="MindFire" description="">
+  <StartMode startupentry="MindFire" single="True">
+    <Execute entry="MindFire" type="None" />
+  </StartMode>
+  <Entries>
+    <Entry filename="./MindFire.prjx" />
+  </Entries>
+  <Configurations active="Debug">
+    <Configuration name="Release">
+      <Entry name="MindFire" configurationname="Debug" build="False" />
+    </Configuration>
+    <Configuration name="Debug">
+      <Entry name="MindFire" configurationname="Debug" build="False" />
+    </Configuration>
+  </Configurations>
+</Combine>
