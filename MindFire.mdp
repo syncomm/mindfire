@@ -1,37 +1,36 @@
-<Project name="MindFire" fileversion="2.0" language="C#" ctype="DotNetProject">
+<Project name="MindFire" fileversion="2.0" DefaultNamespace="MindFire" language="C#" targetFramework="4.0" ctype="DotNetProject">
   <Configurations active="Debug">
     <Configuration name="Debug" ctype="DotNetProjectConfiguration">
-      <Output directory="./bin/Debug" assembly="MindFire" />
+      <Output directory="bin/Debug" assembly="MindFire" />
       <Build debugmode="True" target="Exe" />
-      <Execution runwithwarnings="False" consolepause="True" runtime="MsNet" />
-      <CodeGeneration compiler="Csc" warninglevel="4" optimize="True" unsafecodeallowed="False" generateoverflowchecks="True" mainclass="" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+      <Execution consolepause="True" runwithwarnings="False" runtime="MsNet" />
+      <CodeGeneration compiler="Mcs" warninglevel="4" optimize="True" unsafecodeallowed="False" generateoverflowchecks="True" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
     </Configuration>
     <Configuration name="Release" ctype="DotNetProjectConfiguration">
-      <Output directory="./bin/Release" assembly="MindFire" />
+      <Output directory="bin/Release" assembly="MindFire" />
       <Build debugmode="True" target="Exe" />
-      <Execution runwithwarnings="False" consolepause="True" runtime="MsNet" />
-      <CodeGeneration compiler="Csc" warninglevel="4" optimize="True" unsafecodeallowed="False" generateoverflowchecks="True" mainclass="" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+      <Execution consolepause="True" runwithwarnings="False" runtime="MsNet" />
+      <CodeGeneration compiler="Mcs" warninglevel="4" optimize="True" unsafecodeallowed="False" generateoverflowchecks="True" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
     </Configuration>
   </Configurations>
-  <References>
-    <ProjectReference type="Gac" localcopy="True" refto="gdk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <ProjectReference type="Gac" localcopy="True" refto="glade-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <ProjectReference type="Gac" localcopy="True" refto="glib-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <ProjectReference type="Gac" localcopy="True" refto="gtk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <ProjectReference type="Gac" localcopy="True" refto="pango-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-  </References>
-  <DeploymentInformation strategy="File">
-    <excludeFiles />
-  </DeploymentInformation>
   <Contents>
-    <File name="./gui.glade" subtype="Code" buildaction="EmbedAsResource" />
-    <File name="./Main.cs" subtype="Code" buildaction="Compile" />
-    <File name="./AssemblyInfo.cs" subtype="Code" buildaction="Compile" />
-    <File name="./pixmaps/aboutDialogImage.png" subtype="Code" buildaction="EmbedAsResource" />
-    <File name="./pixmaps/mindFireMonkey.png" subtype="Code" buildaction="EmbedAsResource" />
-    <File name="../icons/packs/gnant/24x24/stock/media-play.png" subtype="Code" buildaction="EmbedAsResource" />
-    <File name="../icons/packs/gnant/24x24/stock/media-stop.png" subtype="Code" buildaction="EmbedAsResource" />
-    <File name="./pixmaps/media-next.png" subtype="Code" buildaction="EmbedAsResource" />
-    <File name="./pixmaps/media-prev.png" subtype="Code" buildaction="EmbedAsResource" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="gui.glade" />
+    <File subtype="Code" buildaction="Compile" name="Main.cs" />
+    <File subtype="Code" buildaction="Compile" name="AssemblyInfo.cs" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/aboutDialogImage.png" copyToOutputDirectory="PreserveNewest" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/mindFireMonkey.png" copyToOutputDirectory="PreserveNewest" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/media-next.png" copyToOutputDirectory="PreserveNewest" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/media-prev.png" copyToOutputDirectory="PreserveNewest" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/media-stop.png" copyToOutputDirectory="PreserveNewest" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/media-play.png" copyToOutputDirectory="PreserveNewest" />
   </Contents>
+  <References>
+    <ProjectReference specificVersion="False" type="Gac" localcopy="True" refto="glib-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <ProjectReference specificVersion="False" type="Gac" localcopy="True" refto="gtk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <ProjectReference specificVersion="False" type="Gac" localcopy="True" refto="pango-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <ProjectReference type="Gac" localcopy="False" refto="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <ProjectReference type="Gac" localcopy="False" refto="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <ProjectReference specificVersion="False" type="Gac" localcopy="False" refto="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  </References>
+  <DeploymentInformation strategy="File" />
 </Project>
