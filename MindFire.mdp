@@ -17,12 +17,12 @@
     <File subtype="Code" buildaction="EmbedAsResource" name="gui.glade" />
     <File subtype="Code" buildaction="Compile" name="Main.cs" />
     <File subtype="Code" buildaction="Compile" name="AssemblyInfo.cs" />
-    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/aboutDialogImage.png" copyToOutputDirectory="PreserveNewest" />
-    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/mindFireMonkey.png" copyToOutputDirectory="PreserveNewest" />
-    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/media-next.png" copyToOutputDirectory="PreserveNewest" />
-    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/media-prev.png" copyToOutputDirectory="PreserveNewest" />
-    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/media-stop.png" copyToOutputDirectory="PreserveNewest" />
-    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/media-play.png" copyToOutputDirectory="PreserveNewest" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/aboutDialogImage.png" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/mindFireMonkey.png" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/media-next.png" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/media-prev.png" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/media-stop.png" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="pixmaps/media-play.png" />
   </Contents>
   <References>
     <ProjectReference specificVersion="False" type="Gac" localcopy="True" refto="glib-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />

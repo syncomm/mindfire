@@ -207,7 +207,7 @@ public class MindFire
 			if (startWordIter.Equal(Gtk.TextIter.Zero)) {
 				startWordIter = textBuffer.StartIter;
 			}
-			endWordIter = startWordIter.Copy ();
+			endWordIter = startWordIter;
 			
 			while (startWordIter.BackwardChar () && ! startWordIter.StartsWord ()) {
 				
@@ -235,7 +235,7 @@ public class MindFire
 				if (endWordIter.Equal(Gtk.TextIter.Zero)) {
 					endWordIter = textBuffer.StartIter;
 				}
-				startWordIter = endWordIter.Copy ();
+				startWordIter = endWordIter;
 				curWord = GetNextWord ();
 				if (curWord == "") { return; }
 				HilightWord();
@@ -291,7 +291,7 @@ public class MindFire
 			if (endWordIter.Equal(Gtk.TextIter.Zero)) {
 				endWordIter = textBuffer.StartIter;
 			}
-			startWordIter = endWordIter.Copy ();
+			startWordIter = endWordIter;
 			curWord = GetNextWord();
 			ShowWord(curWord);
 			HilightWord();
@@ -452,14 +452,14 @@ public class MindFire
 			endPara = false;
 			wao = 1;
 			
-			startWordIter = endWordIter.Copy ();
+			startWordIter = endWordIter;
 			// Need to trap last word see gnomeRSVP
 			if(!endWordIter.ForwardWordEnd ()) { StopRsvp (null, null); }
 			do
 			{
-				prevCharIter = endWordIter.Copy ();
+				prevCharIter = endWordIter;
 				prevCharIter.BackwardChar ();
-				nextCharIter = endWordIter.Copy ();
+				nextCharIter = endWordIter;
 				nextCharIter.ForwardChar ();
 				
 				if (Regex.IsMatch(endWordIter.Char, @"^\S$", RegexOptions.None)  
@@ -472,7 +472,7 @@ public class MindFire
 									  	
 				  	if (text.Length <= config.WordGroupSize) {
 				  		if ( endWordIter.InsideSentence() ) {
-				  			prevWordEndIter = prevCharIter.Copy ();
+				  			prevWordEndIter = prevCharIter;
 				  			wao++;
 				  		}
 				  	} else {
@@ -504,7 +504,7 @@ public class MindFire
 						
 			if (word.Length > config.WordGroupSize && !prevWordEndIter.Equal(Gtk.TextIter.Zero)) {
 				wao--;
-				endWordIter = prevWordEndIter.Copy ();
+				endWordIter = prevWordEndIter;
 			}
 			
 			
@@ -530,9 +530,9 @@ public class MindFire
 			if (! (endHilightIter.Equal(Gtk.TextIter.Zero)) )
 				textBuffer.RemoveTag("hilight", startHilightIter, endHilightIter);
 						
-			startHilightIter = startWordIter.Copy ();
-			endHilightIter = endWordIter.Copy ();
-			prevEndCharIter = endWordIter.Copy ();
+			startHilightIter = startWordIter;
+			endHilightIter = endWordIter;
+			prevEndCharIter = endWordIter;
 			prevEndCharIter.BackwardChar ();
 			while ( Regex.IsMatch(startHilightIter.Char, @"[\s-]", RegexOptions.None) ) 
 			{
@@ -605,7 +605,7 @@ public class MindFire
 			
 			if (!slideLock) {
 				startWordIter.Offset = Convert.ToInt32(slider.Value);
-				endWordIter = startWordIter.Copy ();
+				endWordIter = startWordIter;
 				curWord = GetNextWord();
 				ShowWord(curWord);
 				HilightWord();
